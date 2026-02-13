@@ -3,5 +3,13 @@ uvicorn
 python-multipart
 python-dotenv
 loguru
-
 pydantic-settings
+
+# ML / Audio
+openai-whisper
+transformers
+torch
+numpy
+soundfile
+librosa
+pydub

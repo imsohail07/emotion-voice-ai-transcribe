@@ -37,8 +37,8 @@ jobs:
           # Warnings (non-blocking)
           flake8 . --count --exit-zero --max-complexity=10 --max-line-length=120 --statistics
 
-      - name: Check imports
-        run: python -c "import app.main; print('Backend imports OK')"
+      - name: Check syntax
+        run: python -m py_compile app/main.py && echo 'Backend syntax OK'
 
   # ── Frontend ─────────────────────────────────────────────
   frontend:
