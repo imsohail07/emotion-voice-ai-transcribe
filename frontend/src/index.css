@@ -1,0 +1,94 @@
+@import "tailwindcss";
+
+/* ===================== */
+/* DESIGN TOKENS */
+/* ===================== */
+
+:root {
+  /* Light theme */
+  --bg-main: #f8fafc;
+  --bg-panel: #ffffff;
+  --border: #e5e7eb;
+
+  --text-main: #0f172a;
+  --text-dim: #475569;
+
+  --accent: #2563eb;
+
+  --placeholder-bg: #f1f5f9;
+}
+
+/* Dark theme */
+[data-theme="dark"] {
+  --bg-main: #0b1020;
+  --bg-panel: #11162a;
+  --border: #1f2937;
+
+  --text-main: #e5e7eb;
+  --text-dim: #9ca3af;
+
+  --accent: #3b82f6;
+
+  --placeholder-bg: #0f172a;
+}
+
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+  font-family: 'JetBrains Mono', monospace;
+  min-height: 100vh;
+}
+
+/* ===================== */
+/* COMPONENTS */
+/* ===================== */
+
+.panel {
+  background: var(--bg-panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: white;
+  border-radius: 8px;
+  transition: opacity 0.15s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9;
+}
+
+.btn-secondary {
+  border: 1px solid var(--border);
+  color: var(--text-main);
+  background: transparent;
+  border-radius: 8px;
+}
+
+.upload-box {
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  cursor: pointer;
+  background: var(--placeholder-bg);
+}
+
+.upload-box:hover {
+  border-color: var(--accent);
+}
+
+/* Empty state blocks */
+.empty-state {
+  height: 100%;
+  border-radius: 8px;
+  background: var(--placeholder-bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--text-dim);
+  font-size: 14px;
+}
